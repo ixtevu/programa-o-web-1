@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Loja Exemplo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 3.8 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <style>
+    body {
+      background: #fff;
+    }
+    .navbar {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #e90909 !important;
+    }
+    .navbar-brand span {
+      color: #ff6600;
+    }
+    .search-bar input {
+      width: 300px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      padding: 5px 15px;
+    }
+    .product-card {
+      border: 1px solid #eee;
+      border-radius: 5px;
+      padding: 15px;
+      text-align: center;
+      margin-bottom: 30px;
+      background: #fff;
+      transition: box-shadow 0.3s;
+    }
+    .product-card:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .product-price {
+      color: #333;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .btn-buy {
+      background-color: #0a86fa;
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      margin-top: 10px;
+      border-radius: 4px;
+    }
+    .offers-section {
+      text-align: center;
+      background: #000;
+      color: #fff;
+      padding: 20px 0;
+      margin: 30px 0;
+    }
+    .offers-timer span {
+      font-size: 20px;
+      margin: 0 10px;
+      background: #fff;
+      color: #000;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" style="background-color: #fff; padding: 10px 0;">
+  <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+    
+    <div class="navbar-header" style="display: flex; align-items: center;">
+      <style>
+        .navbar-brand img {
+          height: 40px;      /* Ajuste o tamanho da logo */
+          width: auto;       /* Mantém a proporção */
+          vertical-align: middle;
+        }
+
+        .search-bar input {
+          width: 300px;
+          padding: 8px 12px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          outline: none;
+        }
+
+        .search-bar input:focus {
+          border-color: #666;
+        }
+
+        .navbar a {
+          color: #333;
+          text-decoration: none;
+          font-size: 16px;
+        }
+
+        .navbar a:hover {
+          color: #007bff;
+        }
+      </style>
+
+      <a class="navbar-brand" href="#">
+        <img src="2.png" alt="Logo da Loja">
+      </a>
+    </div>
+
+    <div class="navbar-form navbar-left search-bar">
+      <input type="text" placeholder="Busque pelo produto que você desejar">
+    </div>
+
+    <ul class="nav navbar-nav navbar-right" style="list-style: none; margin: 0; padding: 0;">
+      <li style="display: inline-block;">
+        <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> (10)</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+
+<!-- Produtos -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="product-card">
+        <img src="teclado.webp" alt="Teclado Mecânico">
+        <p>Produto - 01</p>
+        <p class="text-warning">★★★★★</p>
+        <p class="product-price">R$ 269,99 no cartão<br><small>R$ 239,99 no pix</small></p>
+        <button class="btn btn-buy">COMPRAR</button>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="product-card">
+        <img src="c:\Users\istev\OneDrive\Desktop\testes em html\mousepad.jpg" alt="Mousepad">
+        <p>Produto - 02</p>
+        <p class="text-warning">★★★★★</p>
+        <p class="product-price">R$ 55,90 no cartão<br><small>R$ 45,85 no pix</small></p>
+        <button class="btn btn-buy">COMPRAR</button>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="product-card">
+        <img src="mousegamer.jpg" alt="Mouse Gamer">
+        <p>Mouse Gamer Branco redragon</p>
+        <p class="text-warning">★★★★★</p>
+        <p class="product-price">R$ 185,80 no cartão<br><small>R$ 165,25 no pix</small></p>
+        <button class="btn btn-buy">COMPRAR</button>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="product-card">
+        <img src="headset.png" alt="Headset RGB">
+        <p>Headset RGB sem fio</p>
+        <p class="text-warning">★★★★★</p>
+        <p class="product-price">R$ 250,90 no cartão<br><small>R$ 220,55 no pix</small></p>
+        <button class="btn btn-buy">COMPRAR</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Ofertas do Dia -->
+<div class="offers-section">
+  <h3>OFERTAS DO DIA <a href="#" style="color:#fff; font-size:14px;">VER TODOS</a></h3>
+  <div class="offers-timer">
+    <span id="hours">00</span>:
+    <span id="minutes">00</span>:
+    <span id="seconds">00</span>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+  // Simulação de contador
+  var hours = 3, minutes = 42, seconds = 34;
+  setInterval(function(){
+    if(seconds === 0){
+      seconds = 59;
+      if(minutes === 0){
+        minutes = 59;
+        hours--;
+      } else {
+        minutes--;
+      }
+    } else {
+      seconds--;
+    }
+    document.getElementById('hours').innerText = ('0'+hours).slice(-2);
+    document.getElementById('minutes').innerText = ('0'+minutes).slice(-2);
+    document.getElementById('seconds').innerText = ('0'+seconds).slice(-2);
+  },1000);
+</script>
+
+</body>
+</html>
